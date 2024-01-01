@@ -28,8 +28,20 @@ Route::get('/', function () {
     ])
     */
 
+    /*
     $post = Post::find(1);
     echo '標題: '.$post->title.'<br>';
     echo '內容: '.$post->content.'<br>';
+    dd($post);
+    */
+
+    $posts = Post::all(); //取出所有貼文
+    //使用迴圈將所有貼文($posts)顯示出來
+    foreach($posts as $post){
+        echo '編號: '.$post->id.'<br>';
+        echo '標題: '.$post->title.'<br>';
+        echo '內容: '.$post->content.'<br>';
+        echo '張貼時間: '.$post->created_at.'<br>';
+    } //迴圈每轉一次，由$posts依序取出一篇貼文$post
     dd($post);
 });
