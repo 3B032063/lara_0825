@@ -23,9 +23,9 @@ Route::get('/', function () {
 
     /*
     Post::create([
-        'title' =>
-        'content' =>
-    ])
+        'title' => 'test title10',
+        'content' => 'test content10',
+    ]);
     */
 
     /*
@@ -45,7 +45,8 @@ Route::get('/', function () {
         echo '張貼時間: '.$post->created_at.'<br>';
     } //迴圈每轉一次，由$posts依序取出一篇貼文$post
     dd($post);
-    */
+    /*
+
 
     /*
     $posts = Post::where('id', '<', 10)->orderBy('id', 'DESC')->get();
@@ -66,6 +67,7 @@ Route::get('/', function () {
     $post -> content = 'saved content';
     $post -> save();
     */
+
 
     /*
     $post = Post::find(1);
@@ -90,6 +92,8 @@ Route::get('/', function () {
     dd($fourthPost);
     */
 
+    /*
     $lastPost = Post::orderBy('id', 'DESC') -> first();
     dd($lastPost);
+    */
 });
