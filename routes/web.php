@@ -35,6 +35,7 @@ Route::get('/', function () {
     dd($post);
     */
 
+    /*
     $posts = Post::all(); //取出所有貼文
     //使用迴圈將所有貼文($posts)顯示出來
     foreach($posts as $post){
@@ -44,4 +45,8 @@ Route::get('/', function () {
         echo '張貼時間: '.$post->created_at.'<br>';
     } //迴圈每轉一次，由$posts依序取出一篇貼文$post
     dd($post);
+    */
+
+    $posts = Post::where('id', '<', 10)->orderBy('id', 'DESC')->get();
+    dd($posts);
 });
