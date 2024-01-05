@@ -112,7 +112,7 @@ Route::get('/', function () {
 
     $comment = Comment::find(2);
     echo $comment -> content . '<br>';
-    cho '***********************' . '<br>'
+    echo '***********************' . '<br>'
     $post = $comment -> post() -> first();
     echo $post -> id . '<br>';
     echo $post -> title . '<br>';
